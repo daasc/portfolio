@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Hola</h1>
+    <h1 class="d">Hola</h1>
   </div>
 </template>
 <script>
@@ -18,3 +18,9 @@ export default {
   },
 };
 </script>
+<style lang="scss">
+.d {
+  color: $color-red
+}
+
+</style>
