@@ -1,11 +1,11 @@
 <template>
   <div>
     <header class="navbar">
-      <a href=""></a>
+      <router-link to="/" class="logo">@daasc</router-link>
       <div class="navbar__mobile" @click="showMenu()">
-        <div class="line1" :class="{line1: menuActive}"></div>
-        <div class="line2" :class="{line2: menuActive}"></div>
-        <div class="line3" :class="{line3: menuActive}"></div>
+        <div :class="{line1: menuActive}"></div>
+        <div :class="{line2: menuActive}"></div>
+        <div :class="{line3: menuActive}"></div>
       </div>
       <ul
         class="navbar__itens"
@@ -16,7 +16,7 @@
         <li class="navbar__links">Projects</li>
         <li class="navbar__links">Resources</li>
         <li class="navbar__links">Contact</li>
-        <li class="navbar__links">Button</li>
+        <li class="navbar__links"><input type="checkbox" name="" id=""></li>
       </ul>
     </header>
   </div>
@@ -36,21 +36,68 @@ export default {
   },
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 
 .notActive {
-  transform: translateX(100%);
-  li {
-    opacity: 0;
-  }
+  transition: transform 0.5s ease-in;
 }
+.line1 {
+  transition: transform 0.5s ease-in;
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+.line2 {
+  opacity: 0;
+}
+.line3 {
+  transition: transform 0.5s ease-in;
+    transform: rotate(45deg) translate(-5px, -7px);
 
+}
 .active {
-  transform: translateX(0%);
+  transform: translateX(0%) !important;
 
   li {
     opacity: 1;
-    color: red;
+    cursor: pointer;
+  }
+}
+input[type="checkbox"] {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  -webkit-appearance: none;
+  -webkit-appearance: none;
+  background: #c6c6c6;
+  outline: none;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: background 300ms linear;
+  
+  // circle
+  &::before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    top: 0px;
+    left: 0px;
+    border-radius: 20px;
+    background-color: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: left 300ms linear;
+  }  
+
+  // move to right
+  &:checked {
+    background: rgb(48, 48, 48);
+  
+    
+    &::before {
+      left: 25px;
+      background-color: #fff;
+    }
   }
 }
 </style>
