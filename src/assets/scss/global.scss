@@ -1,6 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap");
-
+:root {
+  
+}
 $mediaMaxWidth: 1260px;
 $mediaBp1Width: 960px;
 $mediaMinWidth: 480px;
 $mediaInit: 0px;
+$myStartWidth: 0;
+$myEndWidth: 24%;
+
+body {
+  margin: 0;
+}
+
+@media (max-width: 500px) {
+  $myEndWidth: 50%;
+}
+
+@media (max-width: 990px) {
+  $myEndWidth: 50%;
+}
