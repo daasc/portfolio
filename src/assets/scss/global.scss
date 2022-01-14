@@ -12,7 +12,11 @@ $myEndWidth: 24%;
 body {
   margin: 0;
 }
-
+.container {
+  width: 100%;
+  height: calc(100vh - 70px);
+  margin-top: 70px;
+}
 @media (max-width: 500px) {
   $myEndWidth: 50%;
 }

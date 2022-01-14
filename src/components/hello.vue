@@ -2,6 +2,7 @@
   <div>
     <p class="text">Hello, I'm Paulo Sobrinho.</p>
     <p class="profession">Full Stack Enginner @daasc</p>
+    <hr class="separation">
     <div class="social-networks">
       <div class="center">
         <span class="circle" @click="$red">
@@ -60,6 +61,13 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.separation {
+  width: 150px;
+  height: 4px;
+  background-color: $black;
+  border: none;
+  border-radius: 4px;
+}
 .text {
   margin: 0 auto;
   border-right: 4px solid black;
@@ -74,6 +82,7 @@ export default {
 .social-networks {
   display: flex;
   justify-content: center;
+  margin-top: 20px;
 }
 .circle {
   padding: 10px;

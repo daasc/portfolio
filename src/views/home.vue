@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="container home">
     <hello></hello>
   </div>
 </template>
@@ -24,9 +24,6 @@ export default {
 </script>
 <style lang="scss">
 .home {
-  width: 100%;
-  height: calc(100vh - 70px);
-  margin-top: 70px;
   display: flex;
   justify-content: center;
   flex-direction: column;

@@ -11,7 +11,7 @@
         class="navbar__itens"
         :class="{ active: menuActive, notActive: !menuActive }"
       >
-        <li class="navbar__links">About Me</li>
+        <li class="navbar__links"><router-link to="/about">About Me</router-link></li>
         <li class="navbar__links">Tech Stack</li>
         <li class="navbar__links">Projects</li>
         <li class="navbar__links">Resources</li>
@@ -37,7 +37,10 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-
+a {
+  text-decoration: none;
+  color: $black;
+}
 .notActive {
   transition: transform 0.5s ease-in;
 }
