@@ -27,5 +27,9 @@ export default {
   width: 100%;
   height: calc(100vh - 70px);
   margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
 }
 </style>
