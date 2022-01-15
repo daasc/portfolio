@@ -6,12 +6,12 @@
       </figure>
       <div class="about-me__information">
         <p>
-          Hi, I'm a full stack Software Engineer. I'm currently working on
-          developing microservices in node.js with serveless and working on
-          the front end with pure javascript.
+          Hi, I'm a Full-Stack Software Engineer. I'm currently working on
+          developing Micro-Services in Node.js with Serveless and working on
+          the Front-End with pure javascript.
         </p>
         <p>
-          I have training in Front-End, Back-End in node.js, Javascript and
+          I have training in Front-End, Back-End in Node.js, Javascript and
           Vue.js. I am a self-taught professional, always looking to improve my
           skills in search of being a renowned professional. I love doing
           challenges.

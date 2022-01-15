@@ -1,7 +1,7 @@
 <template>
   <div>
     <p class="text">Hello, I'm Paulo Sobrinho.</p>
-    <p class="profession">Full Stack Enginner @daasc</p>
+    <p class="profession">Full-Stack Software Engineer</p>
     <hr class="separation" />
     <div class="social-networks">
       <div class="center">
