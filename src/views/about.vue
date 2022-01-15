@@ -1,13 +1,57 @@
 <template>
   <div class="container">
-    <h1>adsa</h1>
+    <div class="about-me">
+      <figure class="about-me__figure">
+        <img src="../assets/img/person.jpeg" alt="photo " />
+      </figure>
+      <div class="about-me__information">
+        <p>
+          Hi, I'm a full stack Software Engineer. I'm currently working on
+          developing microservices in node.js with serveless and working on
+          the front end with pure javascript.
+        </p>
+        <p>
+          I have training in Front-End, Back-End in node.js, Javascript and
+          Vue.js. I am a self-taught professional, always looking to improve my
+          skills in search of being a renowned professional. I love doing
+          challenges.
+        </p>
+      </div>
+    </div>
   </div>
 </template>
 <script>
 export default {
-  name: 'about',
+  name: "about",
   data() {
     return {};
   },
 };
 </script>
+<style lang="scss">
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.about-me {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .about-me__figure {
+    width: 30%;
+    img {
+      align-self: flex-end;
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+    }
+  }
+  .about-me__information {
+    font-family: 'Fira Mono', monospace;
+    width: 40%;
+    text-align: center;
+    font-size: 20px;
+  }
+}
+</style>
