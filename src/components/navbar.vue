@@ -12,11 +12,11 @@
         :class="{ active: menuActive, notActive: !menuActive }"
       >
         <li class="navbar__links" @click="showMenu()"><router-link to="/about">About Me</router-link></li>
-        <li class="navbar__links">Tech Stack</li>
-        <li class="navbar__links">Projects</li>
-        <li class="navbar__links">Resources</li>
-        <li class="navbar__links">Contact</li>
-        <li class="navbar__links"><input type="checkbox" name="" id=""></li>
+        <li class="navbar__links" @click="showMenu()"><router-link to="/stack">Tech Stack</router-link></li>
+        <li class="navbar__links" @click="showMenu()">Projects</li>
+        <li class="navbar__links" @click="showMenu()">Resources</li>
+        <li class="navbar__links" @click="showMenu()">Contact</li>
+        <li class="navbar__links" @click="showMenu()"><input type="checkbox" name="" id=""></li>
       </ul>
     </header>
   </div>

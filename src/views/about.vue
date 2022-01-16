@@ -7,8 +7,8 @@
       <div class="about-me__information">
         <p>
           Hi, I'm a Full-Stack Software Engineer. I'm currently working on
-          developing Micro-Services in Node.js with Serveless and working on
-          the Front-End with pure javascript.
+          developing Micro-Services in Node.js with Serveless and working on the
+          Front-End with pure javascript.
         </p>
         <p>
           I have training in Front-End, Back-End in Node.js, Javascript and
@@ -29,29 +29,82 @@ export default {
 };
 </script>
 <style lang="scss">
-.container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-.about-me {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  .about-me__figure {
-    width: 30%;
-    img {
-      align-self: flex-end;
-      width: 350px;
-      height: 350px;
-      border-radius: 50%;
+@media (min-width: $mediaInit) {
+  .container {
+    .about-me {
+      display: flex;
+      flex-direction: column;
+      .about-me__figure {
+        width: 80%;
+        img {
+          width: 100%;
+          height: 312px;
+          border-radius: 50%;
+        }
+      }
+      .about-me__information {
+        font-family: "Fira Mono", monospace;
+        width: 100%;
+        text-align: center;
+        font-size: 17px;
+        p {
+          padding: 5px;
+        }
+      }
     }
   }
-  .about-me__information {
-    font-family: 'Fira Mono', monospace;
-    width: 40%;
-    text-align: center;
-    font-size: 20px;
+}
+@media (min-width: $mediaMinWidth) {
+  .container {
+    .about-me {
+      .about-me__figure {
+        width: 68%;
+        margin: 0 auto;
+        img {
+          height: 330px;
+        }
+      }
+      .about-me__information {
+        font-size: 20px;
+      }
+    }
+  }
+}
+@media (min-width: $mediaIpad) {
+  .container {
+    .about-me {
+      .about-me__figure {
+        width: 330px;
+      }
+      .about-me__information {
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+@media (min-width: $mediaMaxWidth) {
+  .container {
+    display: flex;
+    .about-me {
+      flex-direction: row;
+      align-items: center;
+      .about-me__figure {
+        margin: 0px;
+        width: 40%;
+        display: flex;
+        justify-content: flex-end;
+        img {
+          width: 350px;
+          height: 350px;
+          border-radius: 50%;
+        }
+      }
+      .about-me__information {
+        width: 50%;
+        margin: 0px;
+      }
+    }
   }
 }
 </style>
