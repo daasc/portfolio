@@ -32,6 +32,7 @@ export default {
 @media (min-width: $mediaInit) {
   .container {
     .about-me {
+      width: 100%;
       display: flex;
       flex-direction: column;
       .about-me__figure {
@@ -103,6 +104,10 @@ export default {
       .about-me__information {
         width: 50%;
         margin: 0px;
+        p {
+          max-width: 750px;
+          margin-left: 15px;
+        }
       }
     }
   }
