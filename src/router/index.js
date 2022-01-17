@@ -19,6 +19,11 @@ const routes = [
         path: '/stack',
         name: 'stack',
         component: () => import('../views/stacks.vue')
+      },
+      {
+        path: '/projects',
+        name: 'projects',
+        component: () => import('../views/projects.vue')
       }
     ]
   }

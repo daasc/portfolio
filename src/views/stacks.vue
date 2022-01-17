@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-      <h1>My Tech Stack</h1>
+    <h1>My Tech Stack</h1>
     <div class="stacks">
       <div class="stacks__lists">
         <figure class="stacks__icons">
@@ -76,82 +76,6 @@ export default {
   },
 };
 </script>
-<style lang="scss">
-@media (min-width: $mediaInit) {
-  h1 {
-    text-align: center;
-    margin-bottom: 50px;
-  }
-  .stacks {
-    .stacks__lists {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      .stacks__icons {
-        width: 150px;
-        height: 50px;
-        border: 2px solid $black;
-        display: flex;
-        border-radius: 10px;
-        align-items: center;
-        justify-content: center;
-        margin: 0px;
-        margin-bottom: 15px;
-        &:nth-child(4) {
-          img {
-            width: 70px;
-          }
-        }
-        img {
-          width: 35px;
-          height: 35px;
-        }
-        figcaption {
-          margin-left: 5px;
-        }
-      }
-    }
-  }
-}
-@media (min-width: $mediaMaxWidth) {
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    .stacks {
-      align-self: center;
-      width: 70%;
-      .stacks__lists {
-        margin-top: 50px;
-        width: 80%;
-        margin: 0 auto;
-        &:nth-child(2) {
-          width: 100%;
-        }
-        &:last-child {
-          justify-content: center;
-          gap: 7%;
-        }
-        .stacks__icons {
-          width: 200px;
-          height: 70px;
-          &:nth-child(4) {
-            img {
-              width: 80px;
-            }
-          }
-          img {
-            width: 50px;
-            height: 50px;
-          }
-          figcaption {
-            margin-left: 5px;
-            font-family:  "Fira Mono", monospace;
-            font-size: 18px;
-          }
-        }
-      }
-    }
-  }
-}
+<style lang="scss" scoped>
+@import "../assets/scss/stacks/index.scss";
 </style>
