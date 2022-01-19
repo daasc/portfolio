@@ -28,7 +28,7 @@ export default {
   },
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 @media (min-width: $mediaInit) {
   .container {
     .about-me {
@@ -37,6 +37,8 @@ export default {
       flex-direction: column;
       .about-me__figure {
         width: 80%;
+        margin: 0 auto;
+
         img {
           width: 100%;
           height: 312px;

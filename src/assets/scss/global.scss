@@ -8,9 +8,10 @@ $mediaInit: 0px;
 $myStartWidth: 0;
 $myEndWidth: 24%;
 
-body {
+body, figure{
   margin: 0;
 }
+
 .container {
   width: 100%;
   height: calc(100vh - 70px);
