@@ -1,18 +1,21 @@
 <template>
-  <div class="card">
+  <div class="card" @click="openLink(link)">
     <figure class="card__content">
-      <img class="card__content__img" :src="urlImage" />
-      <span class="s"></span>
+      <v-lazy-image class="card__content__img" :src="urlImage" />
       <figcaption class="card__content__description">
-        <div>{{ title }}</div>
-        {{ description }}
+        <span class="card__tittle">{{ title }}</span>
+        <span class="card__stack">{{ stack }}</span>
       </figcaption>
     </figure>
   </div>
 </template>
 <script>
+import VLazyImage from "v-lazy-image";
 export default {
   name: "card",
+  components: {
+    VLazyImage
+  },
   props: {
     urlImage: {
       type: String,
@@ -22,11 +25,11 @@ export default {
       type: String,
       required: true,
     },
-    description: {
+    stack: {
       type: String,
       required: true,
     },
-    alt: {
+    link: {
       type: String,
       required: true,
     },
@@ -34,14 +37,21 @@ export default {
   data() {
     return {};
   },
+  methods: {
+    openLink(link) {
+      window.open(link, "_blank");
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
 .card {
-  width: 370px;
+  width: 400px;
   position: relative;
-  min-height: 250px;
+  min-height: 270px;
   cursor: pointer;
+  margin: 0 auto;
+  margin-bottom: 15px;
   &::before {
     content: " ";
     position: absolute;
@@ -61,12 +71,12 @@ export default {
       18% 68%
     );
     background-color: #1f7da6;
-    
   }
 
   &:hover {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-      rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+      rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+      rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
   }
   .card__content {
     display: flex;
@@ -83,6 +93,16 @@ export default {
       width: 100%;
       height: 20%;
       padding: 0px 10px;
+
+      .card__tittle {
+        font-family: "Fira Mono", monospace;
+        display: block;
+        font-size: 20px;
+      }
+      .card__stack {
+        font-family: "Fira Mono", monospace;
+        font-size: 15px;
+      }
     }
   }
 }

@@ -7,7 +7,8 @@
         :key="index"
         :title="item.title"
         :urlImage="item.urlImage"
-        :description="item.description"
+        :stack="item.stack"
+        :link="item.link"
       ></card-project>
     </div>
   </div>
@@ -41,11 +42,24 @@ export default {
 h1 {
   text-align: center;
 }
-.list__projects {
-  display: flex;
-  justify-content: space-evenly;
-  gap: 50px;
-  margin: 0px 2% 0px 2%;
-  flex-wrap: wrap;
+@media (min-width: $mediaInit ) {
+  .list__projects {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(auto-fill, 290px);
+    grid-row-gap: 0.5em;
+    grid-column-gap: 1em;
+  }
+}
+@media (min-width: $mediaBp1Width ) {
+  .list__projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: $mediaMaxWidth ) {
+  .list__projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 </style>
