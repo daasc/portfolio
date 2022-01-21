@@ -3,7 +3,8 @@
     <p class="text">Hello, I'm Paulo Sobrinho.</p>
     <p class="profession">Full-Stack Software Engineer</p>
     <hr class="separation" />
-    <div class="social-networks">
+    <socialNetworksVue></socialNetworksVue>
+    <!-- <div class="social-networks">
       <div class="center">
         <span class="circle" @click="$red">
           <a
@@ -18,11 +19,7 @@
           </a>
         </span>
         <span class="circle">
-          <a
-            href="https://github.com/daasc"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://github.com/daasc" target="_blank" rel="noopener">
             <img
               class="icons"
               src="../assets/img/github-brands.svg"
@@ -34,7 +31,7 @@
           <a
             href="https://www.hackerrank.com/paulojhole"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener"
           >
             <img
               class="icons"
@@ -47,7 +44,7 @@
           <a
             href="https://www.linkedin.com/in/paulo-sobrinho-93b527185/"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener"
           >
             <img
               class="icons"
@@ -57,12 +54,17 @@
           </a>
         </span>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 <script>
+import socialNetworksVue from './socialNetworks.vue';
+
 export default {
   name: "hello",
+  components: {
+    socialNetworksVue
+  },
   data() {
     return {};
   },

@@ -14,8 +14,7 @@
         <li class="navbar__links" @click="showMenu()"><router-link to="/about">About Me</router-link></li>
         <li class="navbar__links" @click="showMenu()"><router-link to="/stack">Tech Stack</router-link></li>
         <li class="navbar__links" @click="showMenu()"><router-link to="/projects">Projects</router-link></li>
-        <li class="navbar__links" @click="showMenu()">Resources</li>
-        <li class="navbar__links" @click="showMenu()">Contact</li>
+        <li class="navbar__links" @click="showMenu()"><router-link to="/contact">Contact</router-link></li>
         <li class="navbar__links" @click="showMenu()"><input type="checkbox" name="" id=""></li>
       </ul>
     </header>

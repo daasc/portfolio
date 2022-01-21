@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Mono&family=Roboto:ital@1&display=swap');
-
+$mediaLG: 1900px;
 $mediaMaxWidth: 1260px;
 $mediaBp1Width: 960px;
 $mediaIpad: 750px;
@@ -11,7 +11,12 @@ $myEndWidth: 24%;
 body, figure{
   margin: 0;
 }
-
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
 .container {
   width: 100%;
   height: calc(100vh - 70px);

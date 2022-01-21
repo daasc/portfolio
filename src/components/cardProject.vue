@@ -1,7 +1,7 @@
 <template>
   <div class="card" @click="openLink(link)">
     <figure class="card__content">
-      <v-lazy-image class="card__content__img" :src="urlImage" />
+      <v-lazy-image class="card__content__img" :src="urlImage"  alt="image of a project"/>
       <figcaption class="card__content__description">
         <span class="card__tittle">{{ title }}</span>
         <span class="card__stack">{{ stack }}</span>

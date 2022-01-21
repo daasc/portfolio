@@ -62,4 +62,10 @@ h1 {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+@media (min-width: $mediaLG ) {
+  .list__projects {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 </style>
