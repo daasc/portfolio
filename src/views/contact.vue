@@ -2,14 +2,15 @@
   <div class="container">
     <div class="contact">
       <h1>say hi! :-)</h1>
-      <form action="">
+      <form @submit.prevent="sendEmail">
         <fieldset>
           <label for="name">
             <input
               type="text"
-              v-model="contact.name"
+              v-model="contact.from_name"
               id="name"
               placeholder="name"
+              name="from_name"
             />
           </label>
           <label for="email">
@@ -17,6 +18,7 @@
               type="email"
               v-model="contact.email"
               id="email"
+              name="email"
               placeholder="email"
             />
           </label>
@@ -26,6 +28,7 @@
             type="text"
             v-model="contact.subject"
             id="subject"
+            name="subject"
             placeholder="subject"
           />
         </label>
@@ -34,12 +37,16 @@
             name="message"
             id=""
             cols="30"
+            v-model="contact.message"
             rows="10"
             placeholder="message"
           ></textarea>
         </label>
         <div class="align__button">
-          <input type="submit" value="" class="button" />
+          <input
+           type="submit" value="Send"
+           class="button"
+          />
         </div>
       </form>
     </div>
@@ -48,6 +55,7 @@
 </template>
 <script>
 import socialNetworksVue from "../components/socialNetworks.vue";
+import emailjs from "@emailjs/browser";
 
 export default {
   name: "contact",
@@ -57,12 +65,23 @@ export default {
   data() {
     return {
       contact: {
-        name: "",
+        from_name: "",
         email: "",
         subject: "",
         message: "",
+        to_name: "Paulo Sobrinho Ferreira"
       },
     };
+  },
+  methods: {
+    async sendEmail(e) {
+      try {
+        console.log(e)
+       await  emailjs.sendForm("service_p0g0hrj","template_6au9gfd",e.target,"user_iE7JjBRVQcI03YJ7dP4Yz", this.contact)
+      } catch (error) {
+        console.log(error)
+      }
+    },
   },
 };
 </script>
@@ -136,6 +155,28 @@ export default {
   .container {
     .contact {
       width: 65%;
+      form {
+        fieldset {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          label {
+            width: 45%;
+            input[type="text"],
+            [type="email"] {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $mediaLG) {
+  .container {
+    .contact {
+      width: 50%;
       form {
         fieldset {
           display: flex;
