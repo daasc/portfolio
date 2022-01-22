@@ -12,6 +12,7 @@
               placeholder="name"
               name="from_name"
             />
+          <span v-if="this.error.from_name" class="error">name field is required</span>
           </label>
           <label for="email">
             <input
@@ -21,6 +22,7 @@
               name="email"
               placeholder="email"
             />
+            <span class="error" v-if="this.error.email" >email field is required</span>
           </label>
         </fieldset>
         <label for="subject">
@@ -31,6 +33,7 @@
             name="subject"
             placeholder="subject"
           />
+          <span class="error" v-if="this.error.subject" >subject field is required</span>
         </label>
         <label for="message">
           <textarea
@@ -41,12 +44,10 @@
             rows="10"
             placeholder="message"
           ></textarea>
+          <span class="error" v-if="this.error.message" >message field is required</span>
         </label>
         <div class="align__button">
-          <input
-           type="submit" value="Send"
-           class="button"
-          />
+          <input type="submit" value="Send" class="button" />
         </div>
       </form>
     </div>
@@ -69,18 +70,49 @@ export default {
         email: "",
         subject: "",
         message: "",
-        to_name: "Paulo Sobrinho Ferreira"
+      },
+      error: {
+        from_name: false,
+        email: false,
+        subject: false,
+        message: false,
       },
     };
   },
   methods: {
-    async sendEmail(e) {
+    async sendEmail() {
       try {
-        console.log(e)
-       await  emailjs.sendForm("service_p0g0hrj","template_6au9gfd",e.target,"user_iE7JjBRVQcI03YJ7dP4Yz", this.contact)
+        if (!this.validation()) {
+          await emailjs.send(
+            "service_p0g0hrj",
+            "template_6au9gfd",
+            this.contact,
+            "user_iE7JjBRVQcI03YJ7dP4Yz"
+          );
+          this.cleanForm();
+        }
       } catch (error) {
-        console.log(error)
+        console.log(error);
       }
+    },
+    validation() {
+      let hasError = false
+      for (const key in this.contact) {
+        const value = this.contact[key];
+        if (!value) {
+          hasError = true
+          this.error[key] = true;
+        } else {
+          this.error[key] = false;
+        }
+      }
+      return hasError
+    },
+    cleanForm() {
+      this.contact.subject = "";
+      this.contact.message = "";
+      this.contact.from_name = "";
+      this.contact.email = "";
     },
   },
 };
@@ -90,6 +122,10 @@ export default {
   color: black;
 }
 @media (min-width: $mediaInit) {
+  .error {
+    color: $color-red;
+  }
+
   .container {
     display: flex;
     justify-content: center;
