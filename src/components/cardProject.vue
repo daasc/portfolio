@@ -70,7 +70,7 @@ export default {
       0 78%,
       18% 68%
     );
-    background-color: #1f7da6;
+    background-color: $color4;
   }
 
   &:hover {

@@ -18,11 +18,18 @@
         </p>
       </div>
     </div>
+    <h2>My Timeline</h2>
+    <timeline-vue></timeline-vue>
   </div>
 </template>
 <script>
+import timelineVue from "../components/timeline.vue";
+
 export default {
   name: "about",
+  components: {
+    timelineVue,
+  },
   data() {
     return {};
   },
@@ -88,10 +95,14 @@ export default {
 }
 @media (min-width: $mediaMaxWidth) {
   .container {
-    display: flex;
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+    }
     .about-me {
       flex-direction: row;
       align-items: center;
+      margin-top: 20px;
       .about-me__figure {
         margin: 0px;
         width: 40%;

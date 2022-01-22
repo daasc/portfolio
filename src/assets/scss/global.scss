@@ -7,7 +7,13 @@ $mediaMinWidth: 480px;
 $mediaInit: 0px;
 $myStartWidth: 0;
 $myEndWidth: 24%;
-
+$content-width: calc(40vw - 84px);
+$margin: 20px;
+$spacing: 20px;
+$bdrs: 6px;
+$circle-size: 40px;
+$icon-size: 32px;
+$bdrs-icon: 100%;
 body, figure{
   margin: 0;
 }
