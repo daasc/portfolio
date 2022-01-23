@@ -52,7 +52,12 @@
       .navbar__links {
         cursor: pointer;
         font-size: 20px;
-
+        align-items: center;
+        .active {
+          width: 85%;
+          height: 2px;
+          background-color: $black;
+        }
       }
     }
   }
@@ -74,6 +79,11 @@
       margin-bottom: 0px;
       gap: 0px;
       justify-content: space-around;
+
+      .navbar__links {
+        display: flex;
+        flex-direction: column;
+      }
     }
   }
 }

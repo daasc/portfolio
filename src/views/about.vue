@@ -38,6 +38,10 @@ export default {
 <style lang="scss" scoped>
 @media (min-width: $mediaInit) {
   .container {
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+    }
     .about-me {
       width: 100%;
       display: flex;
@@ -95,6 +99,7 @@ export default {
 }
 @media (min-width: $mediaMaxWidth) {
   .container {
+    display: block;
     h2 {
       text-align: center;
       font-size: 2rem;

@@ -1,5 +1,10 @@
 <template>
   <div class="container">
+    <show-message-vue
+      v-if="message"
+      :msg="message"
+      :success="true"
+    ></show-message-vue>
     <div class="contact">
       <h1>say hi! :-)</h1>
       <form @submit.prevent="sendEmail">
@@ -12,7 +17,9 @@
               placeholder="name"
               name="from_name"
             />
-          <span v-if="this.error.from_name" class="error">name field is required</span>
+            <span v-if="this.error.from_name" class="error"
+              >name field is required</span
+            >
           </label>
           <label for="email">
             <input
@@ -22,7 +29,9 @@
               name="email"
               placeholder="email"
             />
-            <span class="error" v-if="this.error.email" >email field is required</span>
+            <span class="error" v-if="this.error.email"
+              >email field is required</span
+            >
           </label>
         </fieldset>
         <label for="subject">
@@ -33,7 +42,9 @@
             name="subject"
             placeholder="subject"
           />
-          <span class="error" v-if="this.error.subject" >subject field is required</span>
+          <span class="error" v-if="this.error.subject"
+            >subject field is required</span
+          >
         </label>
         <label for="message">
           <textarea
@@ -44,7 +55,9 @@
             rows="10"
             placeholder="message"
           ></textarea>
-          <span class="error" v-if="this.error.message" >message field is required</span>
+          <span class="error" v-if="this.error.message"
+            >message field is required</span
+          >
         </label>
         <div class="align__button">
           <input type="submit" value="Send" class="button" />
@@ -57,14 +70,17 @@
 <script>
 import socialNetworksVue from "../components/socialNetworks.vue";
 import emailjs from "@emailjs/browser";
+import showMessageVue from "../components/showMessage.vue";
 
 export default {
   name: "contact",
   components: {
     socialNetworksVue,
+    showMessageVue,
   },
   data() {
     return {
+      message: "",
       contact: {
         from_name: "",
         email: "",
@@ -90,23 +106,34 @@ export default {
             "user_iE7JjBRVQcI03YJ7dP4Yz"
           );
           this.cleanForm();
+          this.showMessage();
+          this.hideMessage();
         }
       } catch (error) {
         console.log(error);
+        this.hideMessage();
       }
     },
+    showMessage() {
+      this.message = "Message sent successfully";
+    },
+    hideMessage() {
+      setTimeout(() => {
+        this.message = "";
+      }, 2900);
+    },
     validation() {
-      let hasError = false
+      let hasError = false;
       for (const key in this.contact) {
         const value = this.contact[key];
         if (!value) {
-          hasError = true
+          hasError = true;
           this.error[key] = true;
         } else {
           this.error[key] = false;
         }
       }
-      return hasError
+      return hasError;
     },
     cleanForm() {
       this.contact.subject = "";

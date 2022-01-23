@@ -4,7 +4,7 @@
       class="timeline__event animated fadeInUp delay-3s timeline__event--type1"
     >
       <div class="timeline__event__icon">
-        <i class="lni-cake"></i>
+        <img src="../assets/img/school.png" alt="high school">
       </div>
       <div class="timeline__event__date">01-01-2015</div>
       <div class="timeline__event__content">
@@ -22,7 +22,7 @@
       class="timeline__event animated fadeInUp delay-2s timeline__event--type2"
     >
       <div class="timeline__event__icon">
-        <i class="lni-burger"></i>
+        <img src="../assets/img/graduation-hat.png" alt="college">
       </div>
       <div class="timeline__event__date">01-01-2018</div>
       <div class="timeline__event__content">
@@ -39,7 +39,7 @@
       class="timeline__event animated fadeInUp delay-1s timeline__event--type3"
     >
       <div class="timeline__event__icon">
-        <i class="lni-slim"></i>
+        <img src="../assets/img/monitor.png" >
       </div>
       <div class="timeline__event__date">01-06-2018</div>
       <div class="timeline__event__content">
@@ -56,7 +56,7 @@
     </div>
     <div class="timeline__event animated fadeInUp timeline__event--type1">
       <div class="timeline__event__icon">
-        <i class="lni-cake"></i>
+        <img src="../assets/img/web-development.png" alt="development">
       </div>
       <div class="timeline__event__date">01-03-2020</div>
       <div class="timeline__event__content">
@@ -71,7 +71,7 @@
     </div>
     <div class="timeline__event animated fadeInUp timeline__event--type2">
       <div class="timeline__event__icon">
-        <i class="lni-cake"></i>
+        <img src="../assets/img/job.png" alt="job">
       </div>
       <div class="timeline__event__date">01-04-2021</div>
       <div class="timeline__event__content">
@@ -95,7 +95,9 @@ export default {
 * {
   box-sizing: border-box;
 }
-
+img {
+  width: 40px;
+}
 h2 {
   margin: 5%;
   text-align: center;
