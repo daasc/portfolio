@@ -5,47 +5,47 @@
       <div class="stacks__lists">
         <figure class="stacks__icons">
           <img
-            src="../assets/img/html-5-logo-svgrepo-com.svg"
+            src="../assets/img/stack/html-5-logo-svgrepo-com.svg"
             alt="html icons"
           />
           <figcaption>HTML 5</figcaption>
         </figure>
         <figure class="stacks__icons">
-          <img src="../assets/img/w3_css-official.svg" alt="css icons" />
+          <img src="../assets/img/stack/w3_css-official.svg" alt="css icons" />
           <figcaption>CSS</figcaption>
         </figure>
         <figure class="stacks__icons">
-          <img src="../assets/img/logo-javascript.svg" alt="javascript icons" />
+          <img src="../assets/img/stack/logo-javascript.svg" alt="javascript icons" />
           <figcaption>Javascript</figcaption>
         </figure>
         <figure class="stacks__icons">
-          <img src="../assets/img/nodejs-horizontal.svg" alt="Node.js icons" />
+          <img src="../assets/img/stack/nodejs-horizontal.svg" alt="Node.js icons" />
           <figcaption>Node.js</figcaption>
         </figure>
       </div>
       <div class="stacks__lists">
         <figure class="stacks__icons">
-          <img src="../assets/img/vuejs-icon.svg" alt="Vue.js icons" />
+          <img src="../assets/img/stack/vuejs-icon.svg" alt="Vue.js icons" />
           <figcaption>Vue.js</figcaption>
         </figure>
         <figure class="stacks__icons">
-          <img src="../assets/img/git-scm-icon.svg" alt="git icons" />
+          <img src="../assets/img/stack/git-scm-icon.svg" alt="git icons" />
           <figcaption>GIT</figcaption>
         </figure>
         <figure class="stacks__icons">
-          <img src="../assets/img/flutterio-icon.svg" alt="flutter icons" />
+          <img src="../assets/img/stack/flutterio-icon.svg" alt="flutter icons" />
           <figcaption>Flutter</figcaption>
         </figure>
         <figure class="stacks__icons">
           <img
-            src="../assets/img/Amazon_Web_Services-Logo.wine.svg"
+            src="../assets/img/stack/Amazon_Web_Services-Logo.wine.svg"
             alt="AWS icons"
           />
           <figcaption>AWS</figcaption>
         </figure>
         <figure class="stacks__icons">
           <img
-            src="../assets/img/Firebase_Logo_Logomark.svg"
+            src="../assets/img/stack/Firebase_Logo_Logomark.svg"
             alt="Firebase icons"
           />
           <figcaption>Firebase</figcaption>
@@ -53,15 +53,15 @@
       </div>
       <div class="stacks__lists">
         <figure class="stacks__icons">
-          <img src="../assets/img/python-5.svg" alt="Python icons" />
+          <img src="../assets/img/stack/python-5.svg" alt="Python icons" />
           <figcaption>Python</figcaption>
         </figure>
         <figure class="stacks__icons">
-          <img src="../assets/img/vscode.svg" alt="vscode icons" />
+          <img src="../assets/img/stack/vscode.svg" alt="vscode icons" />
           <figcaption>Vscode</figcaption>
         </figure>
         <figure class="stacks__icons">
-          <img src="../assets/img/mongodb-icon.svg" alt="mongodb icons" />
+          <img src="../assets/img/stack/mongodb-icon.svg" alt="mongodb icons" />
           <figcaption>MongoDb</figcaption>
         </figure>
       </div>

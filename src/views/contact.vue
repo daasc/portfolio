@@ -60,7 +60,9 @@
           >
         </label>
         <div class="align__button">
-          <input type="submit" value="Send" class="button" />
+          <button type="submit" class="button" :disabled='load' :class="{'button__loading': load}">
+            <span class="button__text">SEND</span>
+          </button>
         </div>
       </form>
     </div>
@@ -80,6 +82,7 @@ export default {
   },
   data() {
     return {
+      load: false,
       message: "",
       contact: {
         from_name: "",
@@ -98,6 +101,7 @@ export default {
   methods: {
     async sendEmail() {
       try {
+        this.load = true
         if (!this.validation()) {
           await emailjs.send(
             "service_p0g0hrj",
@@ -108,8 +112,11 @@ export default {
           this.cleanForm();
           this.showMessage();
           this.hideMessage();
+
         }
+        this.load = false
       } catch (error) {
+        this.load = false
         console.log(error);
         this.hideMessage();
       }
@@ -154,9 +161,7 @@ export default {
   }
 
   .container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    display: block;
     .contact {
       width: 97%;
       border: 2px solid $black;
@@ -190,8 +195,10 @@ export default {
         }
         .align__button {
           display: flex;
+          position: relative;
           justify-content: center;
           .button {
+            position: relative;
             background: none;
             border: solid 2px black;
             color: black;
@@ -208,6 +215,30 @@ export default {
             -ms-transition: all 0.3s;
             -o-transition: all 0.3s;
             transition: all 0.3s;
+
+            .button__text {
+            }
+          }
+          .button__loading {
+            .button__text {
+              visibility: hidden;
+              opacity: 0;
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              width: 16px;
+              height: 16px;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              margin: auto;
+              border: 4px solid transparent;
+              border-top-color: $black;
+              border-radius: 50%;
+              animation: button-loading-spinner 1s ease infinite;
+            }
           }
         }
       }
@@ -216,6 +247,9 @@ export default {
 }
 @media (min-width: $mediaBp1Width) {
   .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     .contact {
       width: 65%;
       form {
@@ -255,6 +289,16 @@ export default {
         }
       }
     }
+  }
+}
+
+@keyframes button-loading-spinner {
+  from {
+    transform: rotate(0turn);
+  }
+
+  to {
+    transform: rotate(1turn);
   }
 }
 </style>

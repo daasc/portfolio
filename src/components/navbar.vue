@@ -1,7 +1,7 @@
 <template>
   <div>
     <header class="navbar">
-      <router-link to="/" class="logo" @click="showMenu('')">@daasc</router-link>
+      <router-link to="/" class="logo" @click="path = ''">@daasc</router-link>
       <div class="navbar__mobile" @click="showMenu()">
         <div :class="{ line1: menuActive }"></div>
         <div :class="{ line2: menuActive }"></div>
