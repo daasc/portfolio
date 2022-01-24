@@ -27,7 +27,7 @@
           <router-link to="/contact" >Contact</router-link>
           <span class="active" v-if="path === '/contact'"></span>
         </li>
-        <li class="navbar__links" @click="showMenu()">
+        <li class="navbar__links" @click="showMenu(this.$route.path)">
           <input type="checkbox" @click="dark()" name="" id="" />
         </li>
       </ul>
@@ -116,7 +116,7 @@ input[type="checkbox"] {
 
   // move to right
   &:checked {
-    background: rgb(48, 48, 48);
+    background: #fff;
 
     &::before {
       left: 25px;
