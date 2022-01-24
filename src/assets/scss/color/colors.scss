@@ -1,12 +1,11 @@
 // RED
 $color-red: #b22222;
-
 // GREEN
 $green: #76ff7a;
 
 // BLACK
 $black: #000;
-
+$white: #fff;
 $color1: #9251ac;
 $color2: #f6a4ec;
 
@@ -15,3 +14,18 @@ $color4: #555ac0;
 
 $color5: #24b47e;
 $color6: #aff1b6;
+
+
+body {
+  --color-primary: white;
+  --font-color: black;
+  --border-color: black;
+  --color-navbar:white;
+}
+body.dark {
+  --color-primary: #0E1117;
+  --font-color: #f5f5f5;
+  --border-color: white;
+  --color-box: #0E1117;
+  --color-navbar: white;
+}

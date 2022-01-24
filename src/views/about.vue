@@ -41,6 +41,7 @@ export default {
     display: block;
     h2 {
       text-align: center;
+      color: var(--font-color);
       font-size: 2rem;
     }
     .about-me {
@@ -60,6 +61,7 @@ export default {
       .about-me__information {
         font-family: "Fira Mono", monospace;
         width: 100%;
+        color: var(--font-color);
         text-align: center;
         font-size: 17px;
         p {
@@ -108,7 +110,7 @@ export default {
     .about-me {
       flex-direction: row;
       align-items: center;
-      margin-top: 20px;
+      margin-top: 100px;
       .about-me__figure {
         margin: 0px;
         width: 40%;

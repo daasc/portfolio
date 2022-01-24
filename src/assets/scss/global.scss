@@ -14,7 +14,11 @@ $bdrs: 6px;
 $circle-size: 40px;
 $icon-size: 32px;
 $bdrs-icon: 100%;
-body, figure{
+body{
+  margin: 0;
+  background-color: var(--color-primary);
+}
+figure {
   margin: 0;
 }
 fieldset {

@@ -60,7 +60,12 @@
           >
         </label>
         <div class="align__button">
-          <button type="submit" class="button" :disabled='load' :class="{'button__loading': load}">
+          <button
+            type="submit"
+            class="button"
+            :disabled="load"
+            :class="{ button__loading: load }"
+          >
             <span class="button__text">SEND</span>
           </button>
         </div>
@@ -101,7 +106,7 @@ export default {
   methods: {
     async sendEmail() {
       try {
-        this.load = true
+        this.load = true;
         if (!this.validation()) {
           await emailjs.send(
             "service_p0g0hrj",
@@ -112,11 +117,10 @@ export default {
           this.cleanForm();
           this.showMessage();
           this.hideMessage();
-
         }
-        this.load = false
+        this.load = false;
       } catch (error) {
-        this.load = false
+        this.load = false;
         console.log(error);
         this.hideMessage();
       }
@@ -163,21 +167,32 @@ export default {
   .container {
     display: block;
     .contact {
+      color: var(--font-color);
       width: 97%;
-      border: 2px solid $black;
+      border: 2px solid var(--border-color);
       margin: 0 auto;
       h1 {
         text-align: center;
       }
       form {
+        ::placeholder {
+          color: var(--font-color);
+          opacity: 1; /* Firefox */
+        }
+        :-ms-input-placeholder {
+          color: var(--font-color);
+        }
+        ::-ms-input-placeholder {
+          color: var(--font-color);
+        }
         padding: 10px;
         input[type="text"],
         [type="email"],
         textarea {
           background: none;
           border: none;
-          border-bottom: solid 2px black;
-          color: black;
+          border-bottom: solid 2px var(--border-color);
+          color: var(--font-color);
           font-size: 1em;
           font-weight: 400;
           letter-spacing: 1px;
@@ -200,8 +215,8 @@ export default {
           .button {
             position: relative;
             background: none;
-            border: solid 2px black;
-            color: black;
+            border: solid 2px var(--border-color);
+            color: var(--font-color);
             cursor: pointer;
             display: inline-block;
             font-family: Fira Mono, sans-serif;
@@ -235,7 +250,7 @@ export default {
               bottom: 0;
               margin: auto;
               border: 4px solid transparent;
-              border-top-color: $black;
+              border-top-color: var(--border-color);
               border-radius: 50%;
               animation: button-loading-spinner 1s ease infinite;
             }

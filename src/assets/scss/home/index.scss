@@ -1,13 +1,16 @@
+.text, .profession{
+  color: var(--font-color)
+}
 .separation {
   width: 150px;
   height: 4px;
-  background-color: $black;
+  background-color: var(--border-color);
   border: none;
   border-radius: 4px;
 }
 .text {
   margin: 0 auto;
-  border-right: 4px solid black;
+  border-right: 4px solid var(--font-color);
   white-space: nowrap;
   overflow: hidden;
   animation: typewriter 5s steps(15) 1s 1 normal both,
@@ -39,7 +42,7 @@
 
 @keyframes blinkCursor {
   from {
-    border-right-color: black;
+    border-right-color: var(--font-color);
   }
   to {
     border-right-color: transparent;

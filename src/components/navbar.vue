@@ -28,7 +28,7 @@
           <span class="active" v-if="path === '/contact'"></span>
         </li>
         <li class="navbar__links" @click="showMenu()">
-          <input type="checkbox" name="" id="" />
+          <input type="checkbox" @click="dark()" name="" id="" />
         </li>
       </ul>
     </header>
@@ -48,13 +48,21 @@ export default {
       this.menuActive = !this.menuActive;
       this.path = path
     },  
+    dark() {
+      const body = document.querySelector('body');
+      if(body.classList.contains('dark')) {
+        body.classList.remove('dark');
+      } else {
+        body.classList.add('dark');
+      }
+    }
   },
 };
 </script>
 <style lang="scss" scoped>
 a {
   text-decoration: none;
-  color: $black;
+  color: var(--font-color);
 }
 .notActive {
   transition: transform 0.5s ease-in;

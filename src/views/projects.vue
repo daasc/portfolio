@@ -41,6 +41,7 @@ export default {
 <style lang="scss" scoped>
 h1 {
   text-align: center;
+  color: var(--font-color);
 }
 @media (min-width: $mediaInit ) {
   .list__projects {
