@@ -27,7 +27,7 @@
       div {
         width: 32px;
         height: 2px;
-        background-color: $black;
+        background-color: var(--border-color);
         margin: 8px;
       }
     }

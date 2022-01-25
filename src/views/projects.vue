@@ -59,6 +59,9 @@ h1 {
   }
 }
 @media (min-width: $mediaMaxWidth ) {
+  .container {
+    display: block;
+  }
   .list__projects {
     grid-template-columns: repeat(3, 1fr);
   }
