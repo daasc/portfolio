@@ -51,7 +51,7 @@ export default {
       .about-me__figure {
         width: 80%;
         margin: 0 auto;
-
+        margin-top: 25px;
         img {
           width: 100%;
           height: 312px;

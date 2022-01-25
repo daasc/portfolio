@@ -3,31 +3,7 @@
     {
       "title": "Calculate",
       "urlImage": "https://camo.githubusercontent.com/09d18ea6c6b23c3a5534169f08110f5c53006b60cff2327b70247de5b6926237/68747470733a2f2f692e706f7374696d672e63632f6a3567466e304c342f436170747572612d64652d54656c612d323032312d31322d31392d612d732d32302d34302d33342e706e67",
-      "stack": "JS, HTML, CSS",
-      "link": "https://github.com/daasc/Calculate"
-    },
-    {
-      "title": "Calculate",
-      "urlImage": "https://camo.githubusercontent.com/09d18ea6c6b23c3a5534169f08110f5c53006b60cff2327b70247de5b6926237/68747470733a2f2f692e706f7374696d672e63632f6a3567466e304c342f436170747572612d64652d54656c612d323032312d31322d31392d612d732d32302d34302d33342e706e67",
-      "stack": "JS, HTML, CSS",
-      "link": "https://github.com/daasc/Calculate"
-    },
-    {
-      "title": "Calculate",
-      "urlImage": "https://camo.githubusercontent.com/09d18ea6c6b23c3a5534169f08110f5c53006b60cff2327b70247de5b6926237/68747470733a2f2f692e706f7374696d672e63632f6a3567466e304c342f436170747572612d64652d54656c612d323032312d31322d31392d612d732d32302d34302d33342e706e67",
-      "stack": "JS, HTML, CSS",
-      "link": "https://github.com/daasc/Calculate"
-    },
-    {
-      "title": "Calculate",
-      "urlImage": "https://camo.githubusercontent.com/09d18ea6c6b23c3a5534169f08110f5c53006b60cff2327b70247de5b6926237/68747470733a2f2f692e706f7374696d672e63632f6a3567466e304c342f436170747572612d64652d54656c612d323032312d31322d31392d612d732d32302d34302d33342e706e67",
-      "stack": "JS, HTML, CSS",
-      "link": "https://github.com/daasc/Calculate"
-    },
-    {
-      "title": "Calculate",
-      "urlImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVbL9cUVjOaGm8B4k8iiudw81VDoJjHBwk_Q&usqp=CAU",
-      "stack": "JS, HTML, CSS",
+      "stack": "JS, HTML, CSS, Jest",
       "link": "https://github.com/daasc/Calculate"
     }
   ]
