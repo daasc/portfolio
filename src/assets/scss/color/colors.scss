@@ -21,6 +21,7 @@ body {
   --font-color: black;
   --border-color: black;
   --color-navbar:white;
+  --color-box-shadow: rgba(0, 0, 0, 0.2)
 }
 body.dark {
   --color-primary: #0E1117;
@@ -28,4 +29,5 @@ body.dark {
   --border-color: white;
   --color-box: #0E1117;
   --color-navbar: white;
+  --color-box-shadow: rgba(232, 232, 232, 0.8)
 }

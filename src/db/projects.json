@@ -4,7 +4,15 @@
       "title": "Calculate",
       "urlImage": "https://camo.githubusercontent.com/09d18ea6c6b23c3a5534169f08110f5c53006b60cff2327b70247de5b6926237/68747470733a2f2f692e706f7374696d672e63632f6a3567466e304c342f436170747572612d64652d54656c612d323032312d31322d31392d612d732d32302d34302d33342e706e67",
       "stack": "JS, HTML, CSS, Jest",
-      "link": "https://github.com/daasc/Calculate"
+      "link": "https://github.com/daasc/Calculate",
+      "description": "simple calculator"
+    },
+    {
+      "title": "Counter",
+      "urlImage": "https://i.postimg.cc/bv2H8MXF/Captura-de-Tela-2022-02-19-a-s-11-19-49.png",
+      "stack": "Nuxt.js, Jest, Vuex",
+      "link": "https://github.com/daasc/Counter",
+      "description": "simple counter, was created with the tdd method"
     }
   ]
 }

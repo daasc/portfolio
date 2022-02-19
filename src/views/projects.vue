@@ -5,10 +5,7 @@
       <card-project
         v-for="(item, index) in projects"
         :key="index"
-        :title="item.title"
-        :urlImage="item.urlImage"
-        :stack="item.stack"
-        :link="item.link"
+        :project="item"
       ></card-project>
     </div>
   </div>
@@ -47,6 +44,7 @@ h1 {
   .list__projects {
     width: 100%;
     display: grid;
+    
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(auto-fill, 290px);
     grid-row-gap: 0.5em;
@@ -64,12 +62,14 @@ h1 {
   }
   .list__projects {
     grid-template-columns: repeat(3, 1fr);
+    padding: 0px 10px;
   }
 }
 
 @media (min-width: $mediaLG ) {
   .list__projects {
     grid-template-columns: repeat(4, 1fr);
+    padding: 0px 10px;
   }
 }
 </style>
