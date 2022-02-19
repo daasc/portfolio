@@ -47,7 +47,7 @@ h1 {
     
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(auto-fill, 290px);
-    grid-row-gap: 0.5em;
+    grid-row-gap: 3.5em;
     grid-column-gap: 1em;
   }
 }
