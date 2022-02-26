@@ -13,6 +13,13 @@
       "stack": "Nuxt.js, Jest, Vuex",
       "link": "https://github.com/daasc/Counter",
       "description": "simple counter, was created with the tdd method"
+    },
+    {
+      "title": "Quiz",
+      "urlImage": "https://i.postimg.cc/05G0xB75/Captura-de-Tela-2022-02-21-a-s-21-07-20.png",
+      "stack": "Nuxt.js, Jest, Vuex",
+      "link": "https://github.com/daasc/Quizz",
+      "description": "Quiz was created with the tdd method"
     }
   ]
 }
