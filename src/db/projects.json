@@ -20,6 +20,34 @@
       "stack": "Nuxt.js, Jest, Vuex",
       "link": "https://github.com/daasc/Quizz",
       "description": "Quiz was created with the tdd method"
+    },
+    {
+      "title": "Weather",
+      "urlImage": "https://i.postimg.cc/Y9ySMxrB/Captura-de-Tela-2022-03-07-a-s-22-23-19.png",
+      "stack": "Nuxt.js, Jest, Vuex",
+      "link": "https://github.com/daasc/Weather",
+      "description": "Weather was created with the tdd method"
+    },
+    {
+      "title": "Game Memory Card",
+      "urlImage": "https://i.postimg.cc/HxnCTcsq/Captura-de-Tela-2022-03-07-a-s-22-25-48.png",
+      "stack": "Nuxt.js, Jest, Vuex",
+      "link": "https://github.com/daasc/Memory-Card-Game",
+      "description": "Game Memory Card was created with the tdd method"
+    },
+    {
+      "title": "Todoist",
+      "urlImage": "https://i.postimg.cc/Bb1qY6NK/Captura-de-Tela-2022-03-21-a-s-21-25-54.png",
+      "stack": "Nuxt.js, Jest, Vuex",
+      "link": "https://github.com/daasc/To-Do",
+      "description": "Todoist was created with the tdd method"
+    },
+    {
+      "title": "FlashCard",
+      "urlImage": "https://i.postimg.cc/90tW5S5m/Captura-de-Tela-2022-03-21-a-s-21-28-50.png",
+      "stack": "Nuxt.js, Jest, Vuex",
+      "link": "https://github.com/daasc/FlashCard",
+      "description": "FlashCard was created with the tdd method"
     }
   ]
 }
