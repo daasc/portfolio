@@ -49,6 +49,7 @@ h1 {
     grid-template-rows: repeat(auto-fill, 290px);
     grid-row-gap: 3.5em;
     grid-column-gap: 1em;
+    padding: 15px 10px;
   }
 }
 @media (min-width: $mediaBp1Width ) {
@@ -62,7 +63,7 @@ h1 {
   }
   .list__projects {
     grid-template-columns: repeat(3, 1fr);
-    padding: 0px 10px;
+    padding: 15px 10px;
   }
 }
 
