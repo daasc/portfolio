@@ -48,6 +48,13 @@
       "stack": "Nuxt.js, Jest, Vuex",
       "link": "https://github.com/daasc/FlashCard",
       "description": "FlashCard was created with the tdd method"
+    },
+    {
+      "title": "Github Profiles",
+      "urlImage": "https://i.postimg.cc/SsrNYC4q/Captura-de-Tela-2022-03-29-a-s-20-13-52.png",
+      "stack": "Nuxt.js, Jest, Vuex",
+      "link": "https://github.com/daasc/GitHubProfiles",
+      "description": "Github Profiles was created with the tdd method"
     }
   ]
 }
